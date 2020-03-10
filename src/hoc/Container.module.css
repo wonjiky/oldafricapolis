@@ -1,0 +1,12 @@
+.MainContainer {
+    width: calc(100vw - 120px);
+    background-color: lightblue;
+    margin: auto;
+    height: 50px;
+}
+
+@media screen and (min-width: 1920px) {
+    .MainContainer {
+        width: 1800px;
+    }
+}
