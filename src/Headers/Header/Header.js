@@ -6,7 +6,7 @@ import classes from './Header.module.css';
 const header = props => {
 
     return (
-        <section>
+        <section className={classes.Header}>
             <Parallax
                 image={props.image}
              />

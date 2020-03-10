@@ -1,20 +1,30 @@
 import React from 'react';
-import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
-import classes from './Parallax.module.css';
+import { Parallax } from 'react-parallax';
+// import classes from './Parallax.module.css';
+
+
+const insideStyles = {
+    padding: 20,
+    fontSize: "2rem",
+    position: "fixed",
+    // top: "50%",
+    left: "50%",
+    zIdnex: 0,
+    // transform: "translate(-50%,-50%)"
+  };
 
 const parallax = props => {
     return(
-        <ParallaxProvider>
-            <ParallaxBanner
-                className={classes.Parallax}
-                layers={[
-                    {
-                        image: props.image,
-                        amount: 0.1
-                    }
-                ]}
-            />
-        </ParallaxProvider>
+        <Parallax
+            bgImage={props.image}
+            strength={1000}
+        >
+            <div style={{height: "650px"}}>
+                <div style={insideStyles}>
+                <h1 >Hello</h1>
+                </div>
+            </div>
+        </Parallax>
     )
 }
 
